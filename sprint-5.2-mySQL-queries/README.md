@@ -119,7 +119,3 @@ SELECT * FROM clientes WHERE nombre LIKE '%a%' or nombre LIKE '%r%' ;
 ```
 En el código superior estamos buscando los clientes cuyo nombre tiene una ‘a’ y una ‘r’.
 <br>
-
-## 🎥 VÍDEO DONDE RESUELVO EL EJERCICIO DE SPOTIFY Y TODAS LAS QUERIES
-
-https://www.youtube.com/watch?v=Fh0eAzfvPTI

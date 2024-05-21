@@ -1,5 +1,3 @@
--- ! Vídeo donde explican consultas usando una tienda como ejemplo: https://www.youtube.com/watch?v=ATBGLm7wC2w
-
 USE tienda;
 --1º- Llista el nom de tots els productos que hi ha en la taula producto.
 SELECT nombre FROM producto;
@@ -36,7 +34,6 @@ SELECT * FROM fabricante LIMIT 5;
 --17º- Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
 SELECT * FROM fabricante LIMIT 2 OFFSET 3;
 
--- ! MySQL Offset se usa para especificar de qué fila queremos que se recuperen los datos. Para ser precisos, especifique desde qué fila comenzar a recuperar. La compensación se usa junto con el LIMIT. Aquí, LIMIT no es más que restringir el número de filas de la salida.
 
 --18º- Llista el nom i el preu del producto més barat. (Utilitzi solament les clàusules ORDER BY i LIMIT). NOTA: Aquí no podria usar MIN(preu), necessitaria GROUP BY
 SELECT nombre, precio FROM producto ORDER BY precio ASC LIMIT 1;
@@ -45,7 +42,7 @@ SELECT nombre, precio FROM producto ORDER BY precio DESC LIMIT 1;
 --20º- Llista el nom de tots els productos del fabricant el codi de fabricant del qual és igual a 2.
 SELECT nombre FROM producto WHERE codigo_fabricante = 2;
 
--- ! Vídeo donde explican las consultas multitabla (JOIN, ON...) casualmente usando una tienda como ejemplo: https://www.youtube.com/watch?v=E9m_ii37pNY
+
 
 --21º- Retorna una llista amb el nom del producte, preu i nom de fabricant de tots els productes de la base de dades.
 SELECT p.nombre AS nombre_producto, precio, f.nombre AS nombre_fabricante FROM producto p INNER JOIN fabricante f ON p.codigo_fabricante = f.codigo;
